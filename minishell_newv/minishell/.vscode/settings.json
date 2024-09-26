@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "minishell.h": "c",
+        "typeinfo": "c",
+        "ft_printf.h": "c",
+        "random": "c",
+        "*.tcc": "c",
+        "concepts": "c",
+        "memory_resource": "c",
+        "optional": "c",
+        "new": "c",
+        "functional": "c",
+        "ranges": "c"
+    }
+}
