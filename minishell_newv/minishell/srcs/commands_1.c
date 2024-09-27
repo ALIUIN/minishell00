@@ -187,6 +187,7 @@ void	changewd(t_var *var)
 	if (ft_strcmp(new, cwd))
 		ft_strcpy(new, cwd);
 	printf("%s\n", new);
+	free(var->pn);
 	var->pn = print_mini(var->name, var->usr, cwd);
 }
 

@@ -294,7 +294,7 @@ void	try(t_line *cur, t_var *var, int write_fd)
 		process_it(cur, var, find_in(cur), find_out(cur));
 	if (write_fd > 0)
 		write_t_var(write_fd, var);
-	free_line(sp);
+	//free_line(sp);
 }
 void	free_line(t_line *line)
 {
@@ -346,10 +346,9 @@ int	go_try(char *cmds, t_var *var)
 		free_var(var);
 		read_t_var(pipe_fd[0], var);
 		waitpid(pid, &(var->last), 0);
-		printf("child finish\n");
 		change_after_pipe(var);
 		close(pipe_fd[0]);
+		free_line(line);
 	}
-	free_line(line);
 	return (0);
 }
